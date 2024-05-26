@@ -3,8 +3,8 @@ import { Box, Card, CardActionArea, CardContent, Typography } from '@mui/materia
 function SearchResults({searchResults, searched}) {
     return (
         <Box>
-            {searchResults.length > 0 && searchResults.map((searchResult) => (
-                <Card sx={{ width: 1, mt: 2 }}>
+            {searchResults.length > 0 && searchResults.map((searchResult, i) => (
+                <Card sx={{ width: 1, mt: 2 }} key={i}>
                     <CardActionArea href={searchResult.package.links.npm} target="_blank">
                         <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
